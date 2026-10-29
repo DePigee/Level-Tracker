@@ -1,4 +1,4 @@
-def remove_duplicates(players: list):
+def remove_duplicates(players: list) -> list:
     player_ids = set()
     unique_players = []
     
@@ -9,3 +9,13 @@ def remove_duplicates(players: list):
     return unique_players
 
 
+def total_xp(xp_list: list) -> int:
+    total = 0
+
+    for xp in xp_list:
+        try:
+              converted_xp = int(xp)
+              total += converted_xp 
+        except ValueError:
+            continue
+    return total
