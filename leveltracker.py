@@ -19,3 +19,15 @@ def total_xp(xp_list: list) -> int:
         except ValueError:
             continue
     return total
+
+def get_level(xp: int) -> str:    
+    if(xp >= 1000):
+        return "Master"
+    elif(xp >= 500):
+        return "Expert"
+    elif(xp >= 200):
+        return "Skilled"
+    elif(xp >= 1):
+        return "Beginner"
+    else:
+        return "Unranked"
