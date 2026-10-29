@@ -1,4 +1,4 @@
-from leveltracker import remove_duplicates, total_xp, get_level
+from leveltracker import remove_duplicates, total_xp, get_level, print_report
 
 def main():
     players = [
@@ -13,6 +13,7 @@ def main():
     unique_players = remove_duplicates(players)
     player_xp = total_xp(unique_players[0]["xp"])
     player_level = get_level(player_xp)
+    print_report(unique_players)
     
     
     

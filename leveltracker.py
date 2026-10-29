@@ -31,3 +31,33 @@ def get_level(xp: int) -> str:
         return "Beginner"
     else:
         return "Unranked"
+
+"""
+
+4. print_report(players)
+Loops through the cleaned list.
+Calls total_xp and get_level for each player.
+Prints the table below.
+
+"""
+def print_report(players: list) -> None:
+
+    print("=" * 30)
+    print("PLAYER LEVEL REPORT")
+    print("=" * 30)
+    print(f"{'ID':<6}{'NAME':<9}{'XP':<7}LEVEL")
+    print("-" * 30)
+
+    for player in players:
+        player_xp = total_xp(player["xp"])
+        player_level = get_level(player_xp)
+        print(f"{player['player_id']:<6}{player['name']:<9}{player_xp:<7}{player_level}")
+
+    print("-" * 30)
+    print(f"Total Players: {len(players)}")
+    print("=" * 30)
+
+
+
+
+
